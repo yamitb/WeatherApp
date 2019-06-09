@@ -1,0 +1,16 @@
+.card-selected{
+  border: 2px solid darkcyan;
+}
+.card-item-style{
+  width: 33.3%;
+}
+.container-list{
+  margin-top: 3%;
+}
+.card-text-tmp{
+  font-size: 30px;
+}
+.card-top{
+  width: 50%;
+}
+

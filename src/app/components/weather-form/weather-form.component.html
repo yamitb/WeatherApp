@@ -1,0 +1,65 @@
+<div class="row">
+  <div class="card card-body card-top card-all-style mt-4">
+    <form #weatherForm="ngForm" (ngSubmit)="onSubmit(weatherForm)">
+      <div class="form-group">
+        <label></label>
+        <input type="text" class="form-control" [(ngModel)]="location" name="location" #locationEnterd="ngModel" required minlength="2"
+          placeholder="Enter A City">
+      </div>
+
+      <button class="btn btn-style btn-block">Show Weather</button>
+
+    </form>
+  </div>
+  <div *ngIf="!isEmpty" class="card card-top card-selected mt-4">
+    <div class="card-header card-header-style">
+      {{ item.location }}
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-xs-6 col-md-6">
+          <div class="row">
+            <div class="col-xs-6 col-md-6">
+              <p class="card-text-tmp">{{ item.temperature }} °C </p>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <img [src]="item.iconPath">
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-6">
+          <p class="card-text">Humidity: {{ item.humidity }}</p>
+          <p class="card-text">Windspeed: {{ item.windspeed }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="row">
+  <div class="card card-item-style card-all-style" *ngFor="let item of items">
+    <div class="card-header card-header-style">
+      {{ item.location }}
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-xs-5 col-md-5">
+          <div class="row">
+            <div class="col-xs-6 col-md-6">
+              <p class="card-text-tmp">{{ item.temperature }}</p>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <img [src]="item.iconPath">
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-7 col-md-7">
+          <p class="card-text">Humidity: {{ item.humidity }}</p>
+          <p class="card-text">Windspeed: {{ item.windspeed }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
