@@ -28,7 +28,7 @@
     "crawler": "^1.2.1",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "js-crawler": "^0.3.21",
     "jssoup": "0.0.10",
     "nightmare": "^3.0.2",
